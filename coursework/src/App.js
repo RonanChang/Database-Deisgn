@@ -4,6 +4,7 @@ import Content from "./Content.js";
 import "./App.css";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import News from "./News.js";
+import EmbeddedGist from "./EmbeddedGist.js";
 import ReactDOMServer from "react-dom/server";
 
 const newsdata = [
@@ -38,7 +39,9 @@ const newsdata = [
     title: "Largest Cellphone Carriers to Limit Sales of Location Data",
     body:
       "The change is being made after the system was used to track people without their consent.",
-    src: "carrier.jpg"
+    src: "carrier.jpg",
+    thoughts:
+      "Similar to the first news, the data mentioned in this articles is also cellphone data. With the rapid development of technology, cellphones become the most important tool that human beings can’t live without. With that being said, the leakage of personal data from our cellphones is happening every second and we can’t avoid that. When I started to own my own cellphone, the first thing my parents told me is not to allow any websites to access my location information and I should always keep my GPS off. I’ve been doing that since then. Maybe at that time I didn’t really understand the reason why I wouldn’t want to let others know about my location. But later when I saw advertisement about something I just bought on Taobao (China’s largest online retailing website), I began to realize how annoying it is to feel being “watched” all the time."
   }
 ];
 
@@ -68,8 +71,12 @@ class App extends Component {
           id: 1
         },
         {
-          name: "Assignment 2",
-          content: "This is Assignment 2",
+          name: "Assignment 2 - Sept. 26 2018",
+          content: `
+                    ${ReactDOMServer.renderToStaticMarkup(
+                      <EmbeddedGist gist="RonanChang/9ee7ddf5c9995eee920d37b75b46f7ec" />
+                    )}
+                    `,
           id: 2
         },
         {
