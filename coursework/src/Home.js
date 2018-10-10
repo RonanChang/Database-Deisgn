@@ -9,6 +9,7 @@ class App extends Component {
       assignments: this.props.assignments
     };
   }
+
   render() {
     let assignmentsCopy = this.state.assignments.slice();
     const assignments = assignmentsCopy.map(a => {

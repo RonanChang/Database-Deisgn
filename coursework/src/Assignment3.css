@@ -1,0 +1,49 @@
+.Assignment3 {
+  margin: 35px;
+  font-family: nyt-imperial, georgia, "times new roman", times, serif;
+}
+
+#name {
+  font-size: 30px;
+  color: #999;
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #999;
+}
+
+.text {
+  margin-top: 20px;
+}
+
+.description {
+  background-color: pink;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+}
+
+.graph {
+  margin: 20px;
+  display: flex;
+}
+
+img {
+  flex: 40%;
+  width: 60%;
+  height: 50%;
+  margin-right: 15px;
+}
+.graph_explain {
+  flex: 60%;
+  text-align: left;
+  margin-top: 30px;
+  line-height: 1.6em;
+}
+
+.conclusion {
+  background-color: pink;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+}

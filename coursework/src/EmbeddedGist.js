@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types"; // ES6
 
+const gist_url =
+  "https://gist.githubusercontent.com/RonanChang/9ee7ddf5c9995eee920d37b75b46f7ec/raw/b9295374e66f3793d0370e8da246be2bb92c731b/assignment2.py";
 class EmbeddedGist extends Component {
   constructor(props) {
     super(props);
     this.gist = this.props.gist;
     this.file = this.props.file;
     this.stylesheetAdded = false;
-    //this.changeState = this.changeState.bind(this);
+
     this.state = {
       loading: true,
       src: ``
@@ -29,10 +31,12 @@ class EmbeddedGist extends Component {
     }
   };
 
-  componentDidMount() {
+  componentWillMount() {
     // Create a JSONP callback that will set our state
     // with the data that comes back from the Gist site
 
+    fetch(gist_url).then(this.setState({ loading: false }));
+    /*
     var gistCallback = EmbeddedGist.nextGistCallback();
 
     window[gistCallback] = function(gist) {
@@ -57,13 +61,15 @@ class EmbeddedGist extends Component {
     script.type = "text/javascript";
     script.src = url;
     document.head.appendChild(script);
+    */
   }
 
   render() {
     if (this.state.loading) {
       return <div>loading...</div>;
     } else {
-      return <div dangerouslySetInnerHTML={{ __html: this.state.src }} />;
+      return <div>Gist Fetched</div>;
+      //return <div dangerouslySetInnerHTML={{ __html: this.state.src }} />;
     }
   }
 }
