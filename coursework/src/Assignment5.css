@@ -1,0 +1,22 @@
+.Assignment5 {
+  margin: 35px;
+  font-family: nyt-imperial, georgia, "times new roman", times, serif;
+}
+#description {
+  background-color: rgb(255, 232, 235);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  margin-left: 30px;
+  margin-right: 30px;
+  line-height: 1.6em;
+}
+
+.Assignment5 a {
+  background-color: rgb(255, 232, 235);
+  color: black;
+  padding: 3px;
+  border-radius: 8px;
+  margin-left: 3px;
+  text-align: left;
+}

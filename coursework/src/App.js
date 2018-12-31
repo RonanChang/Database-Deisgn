@@ -7,6 +7,7 @@ import News from "./News.js";
 import EmbeddedGist from "./EmbeddedGist.js";
 import ReactDOMServer from "react-dom/server";
 import Assignment3 from "./Assignment3.js";
+import Assignment5 from "./Assignment5.js";
 
 const newsdata = [
   {
@@ -84,6 +85,11 @@ class App extends Component {
           name: "Assignment 3 - Oct. 09 2018",
           content: `${ReactDOMServer.renderToStaticMarkup(<Assignment3 />)}`,
           id: 3
+        },
+        {
+          name: "Assignment 5 - Oct. 31 2018",
+          content: `${ReactDOMServer.renderToStaticMarkup(<Assignment5 />)}`,
+          id: 4
         }
       ]
     };
